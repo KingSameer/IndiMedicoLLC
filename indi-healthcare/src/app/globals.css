@@ -1,0 +1,315 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --foreground-rgb: 0, 0, 0;
+  --background-rgb: 255, 255, 255;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 5rem;
+  -webkit-tap-highlight-color: transparent;
+}
+
+body {
+  color: rgb(var(--foreground-rgb));
+  background: rgb(var(--background-rgb));
+  overflow-x: hidden;
+}
+
+/* Mobile-first section spacing */
+section {
+  @apply py-8 sm:py-12 md:py-16 lg:py-20;
+}
+
+/* Mobile-friendly buttons */
+button, 
+.btn,
+a[role="button"] {
+  @apply min-h-[44px] min-w-[44px]; /* Minimum touch target size */
+  touch-action: manipulation;
+}
+
+/* Improved touch targets for mobile navigation */
+nav a, 
+.nav-link {
+  @apply py-2 px-3 sm:py-3 sm:px-4;
+  touch-action: manipulation;
+}
+
+/* Mobile-first typography */
+@layer base {
+  h1 {
+    @apply text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight;
+    @apply mb-3 sm:mb-4;
+  }
+  
+  h2 {
+    @apply text-2xl sm:text-3xl md:text-4xl font-bold tracking-tight;
+    @apply mb-2 sm:mb-3;
+  }
+  
+  h3 {
+    @apply text-xl sm:text-2xl md:text-3xl font-semibold;
+    @apply mb-2;
+  }
+  
+  p {
+    @apply text-base sm:text-lg;
+    @apply mb-3;
+  }
+}
+
+/* Mobile-first grid layouts */
+.grid-responsive {
+  @apply grid gap-3 sm:gap-4 md:gap-6;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+}
+
+/* Mobile-first cards */
+.card {
+  @apply bg-white rounded-xl shadow-sm p-4 sm:p-6;
+  @apply hover:shadow-md transition-shadow duration-300;
+}
+
+/* Mobile-first buttons */
+.btn-primary {
+  @apply inline-flex items-center justify-center;
+  @apply px-4 sm:px-6 py-2 sm:py-3;
+  @apply text-base sm:text-lg font-medium;
+  @apply rounded-md shadow-sm;
+  @apply bg-primary-600 text-white;
+  @apply hover:bg-primary-700 transition-colors duration-200;
+  @apply focus:outline-none focus:ring-2 focus:ring-primary-500 focus:ring-offset-2;
+  @apply active:bg-primary-800;
+}
+
+.btn-secondary {
+  @apply inline-flex items-center justify-center;
+  @apply px-4 sm:px-6 py-2 sm:py-3;
+  @apply text-base sm:text-lg font-medium;
+  @apply rounded-md border border-gray-300;
+  @apply bg-white text-gray-700;
+  @apply hover:bg-gray-50 transition-colors duration-200;
+  @apply focus:outline-none focus:ring-2 focus:ring-primary-500 focus:ring-offset-2;
+  @apply active:bg-gray-100;
+}
+
+/* Mobile-first form elements */
+input,
+select,
+textarea {
+  @apply w-full px-4 py-2 sm:py-3;
+  @apply text-base;
+  @apply rounded-md border-gray-300;
+  @apply focus:ring-primary-500 focus:border-primary-500;
+  @apply placeholder-gray-400;
+}
+
+/* Mobile-first container */
+.container-custom {
+  @apply w-full max-w-7xl mx-auto;
+  @apply px-4 sm:px-6 lg:px-8;
+}
+
+/* Improved spacing for mobile */
+.section-spacing {
+  @apply space-y-6 sm:space-y-8 md:space-y-12;
+}
+
+.content-spacing {
+  @apply space-y-3 sm:space-y-4;
+}
+
+/* Mobile-first flex layouts */
+.flex-responsive {
+  @apply flex flex-col sm:flex-row;
+  @apply gap-3 sm:gap-4;
+}
+
+/* Mobile-first images */
+.img-responsive {
+  @apply w-full h-auto;
+  @apply rounded-lg;
+  @apply object-cover;
+}
+
+/* Mobile-first navigation */
+.nav-mobile {
+  @apply fixed inset-0 z-50;
+  @apply bg-white;
+  @apply transform transition-transform duration-300;
+}
+
+/* Improved list spacing for mobile */
+ul, ol {
+  @apply space-y-2;
+}
+
+/* Mobile-first grid columns */
+.grid-cols-responsive {
+  @apply grid;
+  @apply grid-cols-1 sm:grid-cols-2 lg:grid-cols-3;
+  @apply gap-3 sm:gap-4 lg:gap-6;
+}
+
+/* Mobile-first padding */
+.section-padding {
+  @apply py-8 sm:py-12 md:py-16 lg:py-20;
+}
+
+.content-padding {
+  @apply p-4 sm:p-6;
+}
+
+/* Mobile-first margins */
+.section-margin {
+  @apply my-8 sm:my-12 md:my-16 lg:my-20;
+}
+
+.content-margin {
+  @apply my-3 sm:my-4;
+}
+
+/* Improved touch targets */
+.touch-target {
+  @apply min-h-[44px] min-w-[44px];
+  @apply flex items-center justify-center;
+}
+
+/* Mobile-first shadows */
+.shadow-custom {
+  @apply shadow-sm sm:shadow-md hover:shadow-lg;
+  @apply transition-shadow duration-300;
+}
+
+/* Mobile-first borders */
+.border-custom {
+  @apply border border-gray-200;
+  @apply rounded-lg;
+}
+
+/* Prevent horizontal scroll */
+.no-horizontal-scroll {
+  @apply max-w-full overflow-x-hidden;
+}
+
+/* Improved focus styles */
+.focus-custom {
+  @apply focus:outline-none focus:ring-2 focus:ring-primary-500 focus:ring-offset-2;
+}
+
+/* Mobile-first animations */
+.animate-custom {
+  @apply transition-all duration-300 ease-in-out;
+}
+
+/* Hide scrollbar for Chrome, Safari and Opera */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+/* Hide scrollbar for IE, Edge and Firefox */
+.no-scrollbar {
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+}
+
+/* Custom selection color */
+::selection {
+  @apply bg-primary-500 text-white;
+}
+
+/* Accessibility improvements */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* Mobile-first backdrop blur */
+.backdrop-blur-custom {
+  @apply backdrop-blur-md bg-white/90;
+}
+
+/* Mobile-first gradients */
+.gradient-primary {
+  @apply bg-gradient-to-r from-primary-500 to-primary-600;
+}
+
+.gradient-secondary {
+  @apply bg-gradient-to-r from-secondary-500 to-secondary-600;
+}
+
+/* Mobile-first hover effects */
+.hover-custom {
+  @apply hover:scale-105 transition-transform duration-200;
+}
+
+/* Mobile-first active states */
+.active-custom {
+  @apply active:scale-95 transition-transform duration-200;
+}
+
+/* Mobile navigation drawer */
+.mobile-nav-drawer {
+  @apply fixed inset-y-0 right-0 w-full max-w-xs bg-white shadow-xl;
+  @apply transform transition-transform duration-300 ease-in-out;
+  @apply z-50;
+}
+
+.mobile-nav-drawer.open {
+  @apply translate-x-0;
+}
+
+.mobile-nav-drawer.closed {
+  @apply translate-x-full;
+}
+
+/* Mobile-optimized sections */
+.section-mobile {
+  @apply py-6 sm:py-8 md:py-12 lg:py-16;
+}
+
+/* Reduced spacing for mobile stacked elements */
+.stack-mobile > * + * {
+  @apply mt-4 sm:mt-6;
+}
+
+/* Mobile-optimized headings */
+.heading-mobile {
+  @apply text-2xl sm:text-3xl md:text-4xl;
+  @apply leading-tight;
+}
+
+/* Mobile-optimized buttons */
+.button-mobile {
+  @apply w-full sm:w-auto;
+  @apply justify-center;
+  @apply py-3 px-6;
+  @apply text-base font-medium;
+}
+
+/* Mobile-optimized cards */
+.card-mobile {
+  @apply p-4 sm:p-6;
+  @apply rounded-lg;
+  @apply shadow-sm;
+}
+
+/* Mobile-optimized grids */
+.grid-mobile {
+  @apply grid-cols-1 sm:grid-cols-2 lg:grid-cols-3;
+  @apply gap-4 sm:gap-6;
+}
+
+/* Mobile-optimized containers */
+.container-mobile {
+  @apply px-4 sm:px-6 lg:px-8;
+  @apply mx-auto;
+}

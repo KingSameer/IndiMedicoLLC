@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="800" height="600" xmlns="http://www.w3.org/2000/svg">
+  <rect width="100%" height="100%" fill="#e0f2fe"/>
+  <text x="50%" y="50%" font-family="Arial" font-size="24" fill="#0284c7" text-anchor="middle">
+    Modern Hospital Image Placeholder
+  </text>
+  <rect x="100" y="100" width="600" height="400" stroke="#0284c7" stroke-width="2" fill="none"/>
+  <path d="M350 250 h100 v-100 h100 v300 h-300 v-300 h100 z" stroke="#0284c7" stroke-width="2" fill="none"/>
+</svg>
